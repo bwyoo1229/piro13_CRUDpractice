@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ article.title }}</h1>
+
+<p>{{ article.content }}</p>
+
+<a href="{% url 'article:update' pk=article.pk %}">수정하기</a>
+<a href="{% url 'article:delete' pk=article.pk %}">삭제하기</a>
+</body>
+</html>

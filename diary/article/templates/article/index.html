@@ -6,9 +6,11 @@
 </head>
 <body>
 <h1>나의 일기장</h1>
+<ul>
+    {% for article in articles %}
+    <li><a href="{% url 'article:retrieve' pk=article.pk %}">{{ article }}</a></li>
+    {%  endfor %}
+</ul>
 
-{% for article in articles %}
-{{ article }}
-{%  endfor %}
 </body>
 </html>
